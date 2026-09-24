@@ -28,7 +28,7 @@ Rakit is the sister project of [Rewire](https://github.com/Recodex-ID/rewire): s
 - **Roles & permissions.** Permissions are defined in code (`App\Enums\Permission`); roles are edited in the app by a super admin. `admin` gets every module, `staff` is read-only, and you can add roles like "warehouse clerk".
 - **Dashboard.** Sales and purchases this month, orders waiting for approval or delivery, low-stock items, and a 14-day chart of delivered sales. Each card only shows if the user has access to that module.
 - **Back office.** User management, company details for printed documents, a media library, and a full activity log of who changed what.
-- **Private by default.** No public pages: `/` goes to the dashboard, every page is `noindex`, and `robots.txt` disallows everything. Security headers and HTTPS enforcement are on in production.
+- **Private by default.** The only public page is `/landing`, which describes the kit; `/` goes to the dashboard, every page is `noindex`, and `robots.txt` disallows everything. Security headers and HTTPS enforcement are on in production.
 
 Deliberately left out so each project can decide: accounting, invoices and payments, tax (PPN), multiple currencies, partial receipts and deliveries, and transfers between warehouses. The in-app docs explain how to add a module in the same shape.
 

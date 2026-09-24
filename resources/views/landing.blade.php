@@ -63,7 +63,7 @@
     </head>
     <body class="min-h-screen bg-brand-snow text-brand-ink antialiased">
         <header class="bg-brand-ink text-brand-snow">
-            <div class="mx-auto max-w-6xl px-4 sm:px-8">
+            <div class="mx-auto flex min-h-svh max-w-6xl flex-col px-4 sm:px-8">
                 <nav class="flex items-center justify-between gap-4 py-5" aria-label="Main">
                     <a href="{{ route('landing') }}" class="flex items-center gap-3 py-1 {{ $linkFocus }}">
                         <img src="{{ asset('images/logo.png') }}" alt="" width="36" height="36" class="size-9">
@@ -80,7 +80,7 @@
                     </div>
                 </nav>
 
-                <div class="grid gap-12 pt-10 pb-16 lg:grid-cols-12 lg:gap-16 lg:pt-16 lg:pb-24">
+                <div class="grid flex-1 content-center gap-12 pt-10 pb-16 lg:grid-cols-12 lg:items-center lg:gap-16 lg:pt-16 lg:pb-24">
                     <div class="lg:col-span-7">
                         <h1 class="font-display text-4xl leading-[1.1] font-bold sm:text-5xl">
                             A Laravel ERP starter kit that gets stock right.

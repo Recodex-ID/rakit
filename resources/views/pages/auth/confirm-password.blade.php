@@ -1,7 +1,6 @@
 <x-layouts::auth title="Confirm password">
     <div class="flex flex-col gap-8">
         <x-auth-header
-            eyebrow="Secure area"
             title="Confirm password"
             description="This is a secure area of the application. Please confirm your password before continuing."
         />

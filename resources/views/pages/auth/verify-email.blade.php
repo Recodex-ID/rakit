@@ -1,7 +1,6 @@
 <x-layouts::auth title="Email verification">
     <div class="flex flex-col gap-8">
         <x-auth-header
-            eyebrow="One more step"
             title="Verify your email"
             description="Please verify your email address by clicking on the link we just emailed to you."
         />

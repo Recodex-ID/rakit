@@ -80,10 +80,3 @@ select:focus[data-flux-control] {
 /* \[:where(&)\]:size-4 {
     @apply size-4;
 } */
-
-.auth-grid-bg {
-    background-image:
-        linear-gradient(rgba(254, 254, 254, 0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(254, 254, 254, 0.06) 1px, transparent 1px);
-    background-size: 60px 60px;
-}

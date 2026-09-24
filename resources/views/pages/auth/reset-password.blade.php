@@ -1,7 +1,6 @@
 <x-layouts::auth title="Reset password">
     <div class="flex flex-col gap-8">
         <x-auth-header
-            eyebrow="Account recovery"
             title="Reset password"
             description="Please enter your new password below."
         />

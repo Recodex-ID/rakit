@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/Recodex-ID/rakit/compare/v1.1.0...v1.2.0) (2026-09-24)
+
+
+### Features
+
+* add public landing page describing the starter kit ([ed4cf8c](https://github.com/Recodex-ID/rakit/commit/ed4cf8c13e54e7381849087205049ecd8ede4b90))
+* redesign sign-in pages around the stock ledger ([9321324](https://github.com/Recodex-ID/rakit/commit/93213248a331d09a6ae743bc40c9129b955712e2))
+
 ## [1.1.0](https://github.com/Recodex-ID/rakit/compare/v1.0.0...v1.1.0) (2026-09-24)
 
 

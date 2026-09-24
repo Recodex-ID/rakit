@@ -1,0 +1,126 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "recodex-id/rakit",
+    "type": "project",
+    "description": "A Laravel ERP starter kit: inventory, purchasing and sales on a stock ledger, with roles, audit log and printable orders ready to go.",
+    "keywords": [
+        "laravel",
+        "livewire",
+        "starter-kit",
+        "erp",
+        "inventory"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.4",
+        "laravel/chisel": "^0.1.0",
+        "laravel/fortify": "^1.37.2",
+        "laravel/framework": "^13.17",
+        "laravel/tinker": "^3.0",
+        "livewire/blaze": "^1.0",
+        "livewire/flux": "^2.13.1",
+        "livewire/livewire": "^4.1",
+        "spatie/laravel-activitylog": "^5.0",
+        "spatie/laravel-medialibrary": "^11.23",
+        "spatie/laravel-permission": "^8.3"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.24",
+        "larastan/larastan": "^3.9",
+        "laravel/boost": "^2.4",
+        "laravel/pail": "^1.2.5",
+        "laravel/pao": "^1.0.6",
+        "laravel/pint": "^1.27",
+        "laravel/sail": "^1.53",
+        "mockery/mockery": "^1.6",
+        "nunomaduro/collision": "^8.9.3",
+        "pestphp/pest": "^4.7",
+        "pestphp/pest-plugin-laravel": "^4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "setup": [
+            "composer install",
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
+            "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
+            "@php artisan key:generate",
+            "@php artisan storage:link",
+            "@php artisan migrate --force --seed",
+            "npm install",
+            "npm run build"
+        ],
+        "dev": [
+            "Composer\\Config::disableProcessTimeout",
+            "npx concurrently -c \"#93c5fd,#c4b5fd,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"npm run dev\" --names='server,queue,vite'"
+        ],
+        "lint": [
+            "pint --parallel"
+        ],
+        "lint:check": [
+            "pint --parallel --test"
+        ],
+        "ci:check": [
+            "Composer\\Config::disableProcessTimeout",
+            "@test"
+        ],
+        "types:check": [
+            "phpstan analyse"
+        ],
+        "test": [
+            "@php artisan config:clear --ansi",
+            "@lint:check",
+            "@types:check",
+            "@php artisan test"
+        ],
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+            "@php artisan boost:update --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
+            "@php artisan key:generate --ansi",
+            "@php artisan storage:link --ansi",
+            "@php artisan migrate --graceful --seed --ansi"
+        ],
+        "pre-package-uninstall": [
+            "Illuminate\\Foundation\\ComposerScripts::prePackageUninstall"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [],
+            "installer": {
+                "post-create-project": []
+            }
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

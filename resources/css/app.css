@@ -1,0 +1,89 @@
+@import 'tailwindcss';
+@import '../../vendor/livewire/flux/dist/flux.css';
+
+@source '../views';
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../vendor/livewire/flux-pro/stubs/**/*.blade.php';
+@source '../../vendor/livewire/flux/stubs/**/*.blade.php';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+    /* Brand palette, fed to the Flux-powered UI via --color-accent-* below. */
+    --color-brand-navy: #1a2a4b;
+    --color-brand-navy-light: #2a3a5b;
+    --color-brand-silver: #bcbfc4;
+    --color-brand-snow: #fefefe;
+    --color-brand-accent: #4da3ff;
+    --color-brand-accent-dark: #2871c7;
+
+    /* Rebase Flux's "zinc" to a custom gray scale tinted with the brand navy's hue (~221deg),
+       instead of Tailwind's generic slate, so the sidebar -- the only permanently-dark surface
+       in this app (see layouts/app.blade.php) -- and its Flux components read as one family
+       with the navy rather than a borrowed, unrelated gray. */
+    --color-zinc-50: hsl(220 45% 97%);
+    --color-zinc-100: hsl(220 38% 94%);
+    --color-zinc-200: hsl(220 28% 87%);
+    --color-zinc-300: hsl(220 22% 76%);
+    --color-zinc-400: hsl(220 16% 62%);
+    --color-zinc-500: hsl(220 16% 48%);
+    --color-zinc-600: hsl(221 22% 36%);
+    --color-zinc-700: hsl(221 28% 27%);
+    --color-zinc-800: hsl(221 35% 18%);
+    --color-zinc-900: hsl(222 40% 13%);
+    --color-zinc-950: hsl(224 45% 8%);
+
+    --color-accent: var(--color-brand-navy);
+    --color-accent-content: var(--color-brand-accent-dark);
+    --color-accent-foreground: var(--color-brand-snow);
+}
+
+@layer theme {
+    /* This app has no light/dark toggle -- .dark only ever matches the sidebar, which
+       layouts/app.blade.php forces permanently dark, so these are its fixed accent colors. */
+    .dark {
+        --color-accent: var(--color-brand-accent);
+        --color-accent-content: var(--color-brand-accent);
+        --color-accent-foreground: var(--color-brand-navy);
+    }
+}
+
+@layer base {
+
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+}
+
+[data-flux-field]:not(ui-radio, ui-checkbox) {
+    @apply grid gap-2;
+}
+
+[data-flux-label] {
+    @apply  !mb-0 !leading-tight;
+}
+
+input:focus[data-flux-control],
+textarea:focus[data-flux-control],
+select:focus[data-flux-control] {
+    @apply outline-hidden ring-2 ring-accent ring-offset-2 ring-offset-accent-foreground;
+}
+
+/* \[:where(&)\]:size-4 {
+    @apply size-4;
+} */
+
+.auth-grid-bg {
+    background-image:
+        linear-gradient(rgba(254, 254, 254, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(254, 254, 254, 0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+}

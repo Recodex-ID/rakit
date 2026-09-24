@@ -13,7 +13,7 @@
                         alt=""
                         width="44"
                         height="44"
-                        class="size-11 shrink-0 rounded-xl border border-brand-ink bg-brand-snow object-contain p-1.5"
+                        class="size-11 shrink-0 object-contain"
                     >
                     <span class="min-w-0 truncate text-lg font-bold text-white">{{ config('app.name') }}</span>
                 </a>

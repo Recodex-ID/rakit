@@ -27,7 +27,7 @@
                 </div>
 
                 <a href="{{ route('home') }}" class="relative z-10 flex items-center gap-3" wire:navigate>
-                    <img src="{{ asset('images/logo.png') }}" alt="" width="44" height="44" class="size-11 rounded-xl border border-brand-ink bg-brand-snow p-2">
+                    <img src="{{ asset('images/logo.png') }}" alt="" width="44" height="44" class="size-11">
                     <span class="flex flex-col leading-none">
                         <span class="font-display text-lg font-bold text-brand-snow">{{ config('app.name') }}</span>
                         <span class="mt-1 font-mono text-[10px] tracking-[0.25em] text-brand-mist/80 uppercase">ERP Starter Kit</span>
@@ -65,7 +65,7 @@
             {{-- Form panel --}}
             <div class="relative flex flex-1 flex-col justify-center bg-brand-snow px-6 py-12 sm:px-12 lg:px-16 xl:px-24">
                 <a href="{{ route('home') }}" class="absolute top-8 left-6 flex items-center gap-3 sm:left-12 lg:hidden" wire:navigate>
-                    <img src="{{ asset('images/logo.png') }}" alt="" width="40" height="40" class="size-10 rounded-xl border border-brand-ink bg-brand-snow p-1.5">
+                    <img src="{{ asset('images/logo.png') }}" alt="" width="40" height="40" class="size-10 rounded-xl bg-brand-ink p-2">
                     <span class="flex flex-col leading-none">
                         <span class="font-display font-bold text-brand-ink">{{ config('app.name') }}</span>
                         <span class="mt-1 font-mono text-[9px] tracking-[0.25em] text-brand-ink/70 uppercase">ERP Starter Kit</span>

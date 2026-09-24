@@ -5,7 +5,7 @@
     </head>
     <body class="min-h-screen bg-zinc-50">
 
-        <flux:sidebar sticky collapsible="mobile" class="dark border-e border-brand-navy/50 bg-brand-navy">
+        <flux:sidebar sticky collapsible="mobile" class="dark border-e border-brand-ink/50 bg-brand-ink">
             <flux:sidebar.header>
                 <a href="{{ route('dashboard') }}" wire:navigate class="flex min-w-0 flex-1 items-center gap-3 px-2 py-1">
                     <img
@@ -13,7 +13,7 @@
                         alt=""
                         width="44"
                         height="44"
-                        class="size-11 shrink-0 rounded-xl border border-brand-navy bg-brand-snow object-contain p-1.5"
+                        class="size-11 shrink-0 rounded-xl border border-brand-ink bg-brand-snow object-contain p-1.5"
                     >
                     <span class="min-w-0 truncate text-lg font-bold text-white">{{ config('app.name') }}</span>
                 </a>

@@ -9,6 +9,6 @@ test('mail notifications render with the brand color and app name', function () 
     $html = (string) (new ResetPassword('fake-token'))->toMail($user)->render();
 
     expect($html)
-        ->toContain('#1a2a4b')
+        ->toContain('#171717')
         ->toContain('Rakit');
 });

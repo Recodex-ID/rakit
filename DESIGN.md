@@ -25,12 +25,15 @@ Source of truth: `resources/css/app.css`. Do not introduce new colours outside t
 
 | Token | Value | Role |
 |---|---|---|
-| `--color-brand-navy` | `#1a2a4b` | Primary buttons, sidebar, dark surfaces, chart bars |
-| `--color-brand-navy-light` | `#2a3a5b` | Hover state for navy surfaces |
-| `--color-brand-accent` | `#4da3ff` | Accent on dark surfaces (sidebar, sign-in panel) |
-| `--color-brand-accent-dark` | `#2871c7` | Accent on light backgrounds (passes AA for body text) |
+| `--color-brand-ink` | `#171717` | Primary buttons, sidebar, dark surfaces, body text |
+| `--color-brand-graphite` | `#4d4d4d` | Hover/raised state on dark surfaces, secondary text on light |
+| `--color-brand-orange` | `#f25623` | The one accent: on dark surfaces, chart bars |
+| `--color-brand-orange-dark` | `#c2410c` | Orange text on light backgrounds (`#f25623` is only 3.4:1 on white) |
+| `--color-brand-mist` | `#dedede` | Borders, muted text on dark surfaces |
 | `--color-brand-snow` | `#fefefe` | Page background, text on dark surfaces |
-| `--color-brand-silver` | `#bcbfc4` | Muted text on dark surfaces |
+
+Flux's `zinc` scale is rebased to pure neutral grays anchored on mist (200), graphite (600)
+and ink (900).
 
 Status badges use Flux's named colours, one meaning each: zinc = draft, amber = waiting for
 someone, sky = approved/confirmed, green = done, red = cancelled or short.

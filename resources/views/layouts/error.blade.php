@@ -26,7 +26,7 @@
                 min-height: 100vh;
                 padding: 24px;
                 background: #fefefe;
-                color: #1a2a4b;
+                color: #171717;
                 font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             }
 
@@ -43,7 +43,7 @@
                 width: 44px;
                 height: 44px;
                 border-radius: 12px;
-                background: #1a2a4b;
+                background: #171717;
                 margin-bottom: 28px;
             }
 
@@ -65,7 +65,7 @@
             .description {
                 font-size: 14px;
                 line-height: 1.6;
-                color: #6b7280;
+                color: #4d4d4d;
                 margin: 0 0 32px;
             }
 
@@ -75,7 +75,7 @@
                 gap: 8px;
                 padding: 12px 24px;
                 border-radius: 999px;
-                background: #1a2a4b;
+                background: #171717;
                 color: #fefefe;
                 font-size: 14px;
                 font-weight: 500;
@@ -83,7 +83,7 @@
             }
 
             .button:hover {
-                background: #2a3a5b;
+                background: #4d4d4d;
             }
         </style>
     </head>

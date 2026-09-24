@@ -14,31 +14,31 @@
     --font-mono: 'JetBrains Mono', ui-monospace, monospace;
 
     /* Brand palette, fed to the Flux-powered UI via --color-accent-* below. */
-    --color-brand-navy: #1a2a4b;
-    --color-brand-navy-light: #2a3a5b;
-    --color-brand-silver: #bcbfc4;
+    --color-brand-ink: #171717;
+    --color-brand-graphite: #4d4d4d;
+    --color-brand-mist: #dedede;
     --color-brand-snow: #fefefe;
-    --color-brand-accent: #4da3ff;
-    --color-brand-accent-dark: #2871c7;
+    --color-brand-orange: #f25623;
+    /* #f25623 on white is only 3.4:1, so orange text on light surfaces uses this darker step (5.1:1). */
+    --color-brand-orange-dark: #c2410c;
 
-    /* Rebase Flux's "zinc" to a custom gray scale tinted with the brand navy's hue (~221deg),
-       instead of Tailwind's generic slate, so the sidebar -- the only permanently-dark surface
-       in this app (see layouts/app.blade.php) -- and its Flux components read as one family
-       with the navy rather than a borrowed, unrelated gray. */
-    --color-zinc-50: hsl(220 45% 97%);
-    --color-zinc-100: hsl(220 38% 94%);
-    --color-zinc-200: hsl(220 28% 87%);
-    --color-zinc-300: hsl(220 22% 76%);
-    --color-zinc-400: hsl(220 16% 62%);
-    --color-zinc-500: hsl(220 16% 48%);
-    --color-zinc-600: hsl(221 22% 36%);
-    --color-zinc-700: hsl(221 28% 27%);
-    --color-zinc-800: hsl(221 35% 18%);
-    --color-zinc-900: hsl(222 40% 13%);
-    --color-zinc-950: hsl(224 45% 8%);
+    /* Rebase Flux's "zinc" to a pure neutral scale anchored on the brand grays
+       (200 = mist, 600 = graphite, 900 = ink), so Flux components match the palette
+       instead of Tailwind's cool-tinted zinc. */
+    --color-zinc-50: #f7f7f7;
+    --color-zinc-100: #eeeeee;
+    --color-zinc-200: #dedede;
+    --color-zinc-300: #c4c4c4;
+    --color-zinc-400: #9e9e9e;
+    --color-zinc-500: #737373;
+    --color-zinc-600: #4d4d4d;
+    --color-zinc-700: #3a3a3a;
+    --color-zinc-800: #262626;
+    --color-zinc-900: #171717;
+    --color-zinc-950: #0d0d0d;
 
-    --color-accent: var(--color-brand-navy);
-    --color-accent-content: var(--color-brand-accent-dark);
+    --color-accent: var(--color-brand-ink);
+    --color-accent-content: var(--color-brand-orange-dark);
     --color-accent-foreground: var(--color-brand-snow);
 }
 
@@ -46,9 +46,9 @@
     /* This app has no light/dark toggle -- .dark only ever matches the sidebar, which
        layouts/app.blade.php forces permanently dark, so these are its fixed accent colors. */
     .dark {
-        --color-accent: var(--color-brand-accent);
-        --color-accent-content: var(--color-brand-accent);
-        --color-accent-foreground: var(--color-brand-navy);
+        --color-accent: var(--color-brand-orange);
+        --color-accent-content: var(--color-brand-orange);
+        --color-accent-foreground: var(--color-brand-ink);
     }
 }
 

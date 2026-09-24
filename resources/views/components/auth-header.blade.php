@@ -6,7 +6,7 @@
 
 <div class="flex w-full flex-col">
     @if ($eyebrow)
-        <span class="mb-3 font-mono text-[10px] font-medium tracking-[0.2em] text-brand-accent-dark uppercase">
+        <span class="mb-3 font-mono text-[10px] font-medium tracking-[0.2em] text-brand-orange-dark uppercase">
             {{ $eyebrow }}
         </span>
     @endif

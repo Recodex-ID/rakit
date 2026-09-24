@@ -28,7 +28,7 @@ blockquote {
 }
 
 a {
-    color: #1a2a4b;
+    color: #171717;
 }
 
 a img {
@@ -38,7 +38,7 @@ a img {
 /* Typography */
 
 h1 {
-    color: #1a2a4b;
+    color: #171717;
     font-size: 18px;
     font-weight: bold;
     margin-top: 0;
@@ -103,7 +103,7 @@ img {
 }
 
 .header a {
-    color: #1a2a4b;
+    color: #171717;
     font-size: 19px;
     font-weight: bold;
     text-decoration: none;
@@ -118,7 +118,7 @@ img {
     max-height: 75px;
     width: 75px;
     padding: 12px;
-    border: 1px solid #1a2a4b;
+    border: 1px solid #171717;
     border-radius: 12px;
     background-color: #fefefe;
     box-sizing: border-box;
@@ -244,11 +244,11 @@ img {
 
 .button-blue,
 .button-primary {
-    background-color: #1a2a4b;
-    border-bottom: 8px solid #1a2a4b;
-    border-left: 18px solid #1a2a4b;
-    border-right: 18px solid #1a2a4b;
-    border-top: 8px solid #1a2a4b;
+    background-color: #171717;
+    border-bottom: 8px solid #171717;
+    border-left: 18px solid #171717;
+    border-right: 18px solid #171717;
+    border-top: 8px solid #171717;
 }
 
 .button-green,
@@ -272,7 +272,7 @@ img {
 /* Panels */
 
 .panel {
-    border-left: #1a2a4b solid 4px;
+    border-left: #171717 solid 4px;
     margin: 21px 0;
 }
 

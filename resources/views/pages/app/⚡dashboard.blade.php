@@ -157,7 +157,7 @@ new #[Title('Dashboard')] class extends Component
                                         labels: @js(collect($this->salesPerDay)->pluck('label')),
                                         datasets: [{
                                             data: @js(collect($this->salesPerDay)->pluck('total')),
-                                            backgroundColor: '#1a2a4b',
+                                            backgroundColor: '#f25623',
                                             borderRadius: 4,
                                         }],
                                     },

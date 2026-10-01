@@ -3,7 +3,7 @@
 use App\Models\User;
 
 test('guests can open the landing page', function () {
-    $this->get(route('landing'))
+    $this->get(route('home'))
         ->assertOk()
         ->assertSee('Rakit')
         ->assertSee('laravel new my-erp --using=recodex-id/rakit')
@@ -13,7 +13,7 @@ test('guests can open the landing page', function () {
 
 test('signed in users see a link to the dashboard instead of sign in', function () {
     $this->actingAs(User::factory()->create())
-        ->get(route('landing'))
+        ->get(route('home'))
         ->assertOk()
         ->assertSee(route('dashboard'), false);
 });

@@ -2,9 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-// The app itself lives behind the login; /landing is the one public page, describing the starter kit.
-Route::redirect('/', '/landing')->name('home');
-Route::view('/landing', 'landing')->name('landing');
+// The app itself lives behind the login; the home page is the one public page, describing the starter kit.
+Route::view('/', 'landing')->name('home');
 
 Route::get('/robots.txt', fn () => response("User-agent: *\nDisallow: /\n", 200, ['Content-Type' => 'text/plain; charset=UTF-8']))->name('robots');
 

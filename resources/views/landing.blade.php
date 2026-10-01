@@ -65,7 +65,7 @@
         <header class="bg-brand-ink text-brand-snow">
             <div class="mx-auto flex min-h-svh max-w-6xl flex-col px-4 sm:px-8">
                 <nav class="flex items-center justify-between gap-4 py-5" aria-label="Main">
-                    <a href="{{ route('landing') }}" class="flex items-center gap-3 py-1 {{ $linkFocus }}">
+                    <a href="{{ route('home') }}" class="flex items-center gap-3 py-1 {{ $linkFocus }}">
                         <img src="{{ asset('images/logo.png') }}" alt="" width="36" height="36" class="size-9">
                         <span class="font-display text-lg font-bold">{{ config('app.name') }}</span>
                     </a>

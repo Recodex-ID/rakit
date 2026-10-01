@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/Recodex-ID/rakit/compare/v1.2.0...v1.3.0) (2026-10-01)
+
+
+### Features
+
+* send the root url to the landing page ([488d92f](https://github.com/Recodex-ID/rakit/commit/488d92fb916485e5b873722c8314e81fefe6be50))
+
 ## [1.2.0](https://github.com/Recodex-ID/rakit/compare/v1.1.0...v1.2.0) (2026-09-24)
 
 

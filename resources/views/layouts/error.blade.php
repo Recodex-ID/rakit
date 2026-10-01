@@ -99,7 +99,7 @@
             <h1 class="message">@yield('message')</h1>
             <p class="description">@yield('description')</p>
 
-            <a href="{{ route('home') }}" class="button">Back to dashboard</a>
+            <a href="{{ route('dashboard') }}" class="button">Back to dashboard</a>
         </div>
     </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 
-test('the root url sends guests to the login page', function () {
-    $this->get(route('home'))->assertRedirect('/dashboard');
+test('the root url sends visitors to the landing page', function () {
+    $this->get(route('home'))->assertRedirect(route('landing'));
     $this->get('/dashboard')->assertRedirect(route('login'));
 });

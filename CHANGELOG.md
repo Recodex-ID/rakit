@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/Recodex-ID/rakit/compare/v1.3.0...v1.3.1) (2026-10-01)
+
+
+### Bug Fixes
+
+* serve the landing page at / instead of /landing ([5ce50d0](https://github.com/Recodex-ID/rakit/commit/5ce50d05915faaaac6518c76cbd294b2c952c61b))
+
 ## [1.3.0](https://github.com/Recodex-ID/rakit/compare/v1.2.0...v1.3.0) (2026-10-01)
 
 

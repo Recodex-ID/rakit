@@ -8,7 +8,9 @@ test('guests can open the landing page', function () {
         ->assertSee('Rakit')
         ->assertSee('laravel new my-erp --using=recodex-id/rakit')
         ->assertSee(route('login'), false)
-        ->assertSee('<meta name="robots" content="noindex, nofollow" />', false);
+        ->assertSee('<meta name="robots" content="noindex, nofollow" />', false)
+        ->assertSee('href="https://recodex.id"', false)
+        ->assertSee('PT Reka Mitra Teknologi');
 });
 
 test('signed in users see a link to the dashboard instead of sign in', function () {

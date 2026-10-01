@@ -288,12 +288,17 @@ composer run dev</code></pre>
             </section>
         </main>
 
-        <footer class="border-t border-zinc-200">
-            <div class="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-6 text-sm text-zinc-600 sm:flex-row sm:items-center sm:justify-between sm:px-8">
-                <p>{{ config('app.name') }} is open source under the MIT license.</p>
+        <footer class="bg-brand-ink text-brand-mist">
+            <div class="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-6 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-8">
+                <div class="space-y-1 py-3">
+                    <p>
+                        Built by <a href="https://recodex.id" class="font-medium text-[#CFF008] hover:underline {{ $linkFocus }}">Recodex ID</a> · PT Reka Mitra Teknologi
+                    </p>
+                    <p>{{ config('app.name') }} is open source under the MIT license.</p>
+                </div>
                 <ul class="flex gap-5">
-                    <li><a href="{{ $repositoryUrl }}" class="block py-3 hover:text-brand-ink {{ $linkFocus }}">Source</a></li>
-                    <li><a href="{{ $repositoryUrl }}/releases" class="block py-3 hover:text-brand-ink {{ $linkFocus }}">Releases</a></li>
+                    <li><a href="{{ $repositoryUrl }}" class="block py-3 hover:text-brand-snow {{ $linkFocus }}">Source</a></li>
+                    <li><a href="{{ $repositoryUrl }}/releases" class="block py-3 hover:text-brand-snow {{ $linkFocus }}">Releases</a></li>
                 </ul>
             </div>
         </footer>

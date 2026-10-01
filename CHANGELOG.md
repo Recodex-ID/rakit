@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/Recodex-ID/rakit/compare/v1.3.1...v1.4.0) (2026-10-01)
+
+
+### Features
+
+* credit Recodex ID in the landing page footer ([dfd3aea](https://github.com/Recodex-ID/rakit/commit/dfd3aeadd75a8c106f4ef577f25429a5925a7a54))
+
 ## [1.3.1](https://github.com/Recodex-ID/rakit/compare/v1.3.0...v1.3.1) (2026-10-01)
 
 

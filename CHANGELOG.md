@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/Recodex-ID/rakit/compare/v1.4.0...v1.4.1) (2026-10-01)
+
+
+### Bug Fixes
+
+* sync composer.lock content hash with composer.json ([7afb1fe](https://github.com/Recodex-ID/rakit/commit/7afb1fe35fa3451d7c0d03502c793ca89ba2a662))
+
 ## [1.4.0](https://github.com/Recodex-ID/rakit/compare/v1.3.1...v1.4.0) (2026-10-01)
 
 
